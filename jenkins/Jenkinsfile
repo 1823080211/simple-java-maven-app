@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+            bat 'd:'
+            bat 'cd D:\jenkins\.jenkins\workspace\simple-java-maven-app'
+            bat 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
